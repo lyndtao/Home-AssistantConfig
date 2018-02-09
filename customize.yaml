@@ -1,0 +1,48 @@
+thermostat.family_room: #entity_ID
+  entity_picture: https://example.com/images/nest.jpg
+  icon: mdi:kettle
+  friendly_name: Nest
+  hidden: false
+  homebridge_hidden: true
+  
+binary_sensor.motion_sensor_158d000211a03a:  #人体传感器
+  friendly_name: 人体传感器
+  homebridge_name: 人体传感器
+  homebridge_hidden: false
+  
+light.gateway_light_7811dcdeede7:  #小米网关灯
+  friendly_name: 客厅网关灯
+  homebridge_name: 小米网关灯
+  homebridge_hidden: false  
+  
+sensor.humidity_158d0001fa4852:  #小米湿度
+  friendly_name: 卧室湿度
+  homebridge_name: 卧室湿度
+  homebridge_hidden: false 
+ 
+sensor.illumination_7811dcdeede7:  #卧室光照强度
+  friendly_name: 卧室亮度
+  homebridge_name: 卧室亮度
+  homebridge_hidden: false  
+  
+sensor.temperature_158d0001fa4852:  #卧室温度
+  friendly_name: 卧室温度
+  homebridge_name: 卧室温度
+  homebridge_hidden: false 
+  
+sensor.weather_temperature:  #室外温度
+  friendly_name: 室外温度
+  homebridge_name: 室外温度
+  homebridge_hidden: false 
+  
+sensor.weather_humidity:  #室外湿度
+  friendly_name: 室外湿度
+  homebridge_name: 室外湿度
+  homebridge_hidden: false 
+  
+switch.plug_158d0001a95d62:  #卧室小米插座
+  friendly_name: 卧室小米插座
+  homebridge_name: 卧室小米插座
+  homebridge_hidden: false 
+  
+ 

@@ -1,0 +1,81 @@
+
+hassio:
+  hide_if_away: false
+  icon:
+  mac: B8:27:EB:14:95:55
+  name: hassio
+  picture:
+  track: false
+  vendor: Raspberry Pi Foundation
+
+beilideipad:
+  hide_if_away: false
+  icon: mdi:tablet-ipad
+  mac: 84:78:8B:7B:FD:1A
+  name: iPad
+  picture:
+  track: true
+  vendor: Apple, Inc.
+
+administrator:
+  hide_if_away: false
+  icon: mdi:laptop-windows
+  mac: 4C:34:88:5F:A5:7D
+  name: Dell_PC
+  picture:
+  track: false
+  vendor: unknown
+
+lyndtao:
+  hide_if_away: false
+  icon: mdi:human-male
+  mac: FC:E9:98:81:C2:2D
+  name: lyndtao
+  picture:
+  track: true
+  vendor: unknown
+
+f431c34a48e3:
+  hide_if_away: false
+  icon: mdi:human-female
+  mac: F4:31:C3:4A:48:E3
+  name: sugar
+  picture:
+  track: true
+  vendor: Apple, Inc.
+
+3402866bd393:
+  hide_if_away: false
+  icon: mdi:laptop-windows
+  mac: 34:02:86:6B:D3:93
+  name: Thinkpad
+  picture:
+  track: false
+  vendor: unknown
+
+b0f1ec34d82e:
+  hide_if_away: false
+  icon:
+  mac: B0:F1:EC:34:D8:2E
+  name: b0f1ec34d82e
+  picture:
+  track: false
+  vendor: unknown
+
+708a09214c59:
+  hide_if_away: false
+  icon:
+  mac: 70:8A:09:21:4C:59
+  name: 708a09214c59
+  picture:
+  track: false
+  vendor: HUAWEI TECHNOLOGIES CO.,LTD
+
+7811dcdeede7:
+  hide_if_away: false
+  icon:
+  mac: 78:11:DC:DE:ED:E7
+  name: 7811dcdeede7
+  picture:
+  track: false
+  vendor: unknown
