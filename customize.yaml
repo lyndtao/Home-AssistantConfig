@@ -29,6 +29,7 @@ sensor.temperature_158d0001fa4852:  #卧室温度
   friendly_name: 卧室温度
   homebridge_name: 卧室温度
   homebridge_hidden: false 
+  # icon: mdi:thermometer
   
 sensor.weather_temperature:  #室外温度
   friendly_name: 室外温度
@@ -44,5 +45,3 @@ switch.plug_158d0001a95d62:  #卧室小米插座
   friendly_name: 卧室小米插座
   homebridge_name: 卧室小米插座
   homebridge_hidden: false 
-  
- 

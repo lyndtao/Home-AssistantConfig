@@ -1,8 +1,8 @@
-outside_weather:
-  # 组的friendly_name
-  name: 室外
-  # 组内包含的实体
-  entities: sun.sun, sensor.weather_humidity, sensor.weather_temperature
+# outside_weather:
+  # # 组的friendly_name
+  # name: 室外
+  # # 组内包含的实体
+  # entities: sun.sun, sensor.weather_humidity, sensor.weather_temperature
  
  
 environment_bedroom:
@@ -21,22 +21,28 @@ hallway:
   name: 门厅
   entities: binary_sensor.motion_sensor_158d000211a03a
  
- 
-tab_bedroom:
-  # 增加此组的页签
-  view: yes
-  name: 卧室环境
-  icon: mdi:hotel
-  entities: group.environment_bedroom
- 
-tab_outside:
-  view: yes
-  name: 室外环境
-  icon: mdi:image-filter-hdr
-  entities: group.outside_weather
+
+# tab_outside:
+  # view: yes
+  # name: 室外环境
+  # icon: mdi:image-filter-hdr
+  # entities: group.outside_weather
  
 tab_hallway:
   view: yes
   name: 门厅
   icon: mdi:home-outline
   entities: group.hallway
+  
+tab_livingroom:
+  view: yes
+  icon: mdi:home-circle
+  entities: group.environment_livingroom
+  
+tab_bedroom:
+  # 增加此组的页签
+  view: yes
+  name: 卧室环境
+  icon: mdi:hotel
+  entities: group.environment_bedroom
+  
