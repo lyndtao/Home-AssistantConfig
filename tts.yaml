@@ -1,0 +1,100 @@
+conversation:
+  intents:
+    TurnOnDevice:
+      - 打开{item}
+      - 把{item}打开
+    TurnOffDevice:
+      - 关闭{item}
+      - 把{item}关上
+    RunScript:
+      - 执行{item}脚本
+    Request:
+      - 查询{item}
+    ChangeColour:
+      - 改变台灯颜色
+    ChangeUpBrightness:
+      - 把台灯调亮一点
+    ChangeDownBrightness:
+      - 把台灯调暗一点
+
+ 
+intent_script:
+  TurnOnDevice:
+    speech:
+      text: 已打开{{ item }}
+    action:
+      service: homeassistant.turn_on
+      data_template: 
+        entity_id: >
+          {% if item=="台灯" %}
+            light.guestroom_lamp
+          {% elif item=="睡房日光灯" %}
+            switch.sonoff_02
+          {% elif item=="自动化模式" %}
+            input_boolean.auto_mode
+          {% endif %}
+
+  TurnOffDevice:
+    speech:
+      text: 已关闭{{ item }}
+    action:
+      service: homeassistant.turn_off
+      data_template: 
+        entity_id: >
+          {% if item=="台灯" %}
+            light.guestroom_lamp
+          {% elif item=="睡房日光灯" %}
+            switch.sonoff_02
+          {% elif item=="自动化模式" %}
+            input_boolean.auto_mode
+          {% endif %}
+
+  RunScript:
+    speech:
+      text: 已运行{{ item }}脚本
+    action:
+      service: script.turn_on
+      data_template: 
+        entity_id: >
+          {% if item=="晚安模式" %}
+            script.goodnight
+          {% elif item=="看门狗模式" %}
+            script.watchdog
+          {% endif %}
+
+  Request:
+    speech:
+      text: >
+        {% if item=="室内温度" %}
+          现在室内的温度是{{ states.sensor.temperature_158d0001573875.state }}摄氏度。
+        {% elif item=="室内湿度" %}
+          现在室内的湿度是百分之{{ states.sensor.humidity_158d0001573875.state }}。
+        {% endif %}
+  
+  ChangeColour:
+    speech:
+      text: 已成功执行
+    action:
+      service: light.turn_on
+      entity_id: light.guestroom_lamp
+      data_template: 
+        rgb_color: ['{{ (range(0, 255)|random) }}', '{{ (range(0, 255)|random) }}', '{{ (range(0, 255)|random) }}']
+        transition: '{{ (range(1, 2)|random) }}'
+
+  ChangeUpBrightness:
+    speech:
+      text: 台灯已调亮
+    action:
+      service: light.turn_on
+      entity_id: light.guestroom_lamp
+      data_template: 
+        brightness: '{{states.light.guestroom_lamp.attributes.brightness|int + 100}}'
+
+  ChangeDownBrightness:
+    speech:
+      text: 台灯已调暗
+    action:
+      service: light.turn_on
+      entity_id: light.guestroom_lamp
+      data_template: 
+        brightness: '{{states.light.guestroom_lamp.attributes.brightness|int - 100}}'
