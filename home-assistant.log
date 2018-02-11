@@ -1,0 +1,2 @@
+2018-02-11 22:27:27 WARNING (MainThread) [homeassistant.components.recorder] From version 0.64.0 the 'recorder' component will by default purge data older than 10 days. To keep data longer you must configure 'purge_keep_days' or 'purge_interval'.
+2018-02-11 22:31:12 ERROR (MainThread) [homeassistant.core] Timer got out of sync. Resetting

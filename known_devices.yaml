@@ -52,3 +52,12 @@ raspberrypi:
   picture:
   track: false
   vendor: unknown
+  
+f431c34a48e3:
+  hide_if_away: false
+  icon: mdi:human-female
+  mac: F4:31:C3:4A:48:E3
+  name: sugar
+  picture:
+  track: true
+  vendor: Apple, Inc.

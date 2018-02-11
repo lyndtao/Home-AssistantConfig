@@ -134,7 +134,14 @@ sensor:
 
 # Text to speech
 tts:
-  - platform: google
+  - platform: baidu
+    app_id: 10815222
+    secret_key: b1804df406e8259af25b790f53b9ea97 
+    api_key: pbNMGSTXx7ZNGBFpbI4oW3ho
+    speed: 5
+    pitch: 5
+    volume: 15
+    person: 0
 
 # Cloud
 cloud:
